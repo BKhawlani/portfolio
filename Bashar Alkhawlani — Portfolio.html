@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bashar Alkhawlani — AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--paper:#f3ede2;--ink:#17140f;--mute:#6b6358;--line:rgba(23,20,15,.2);--acc:#b5502f;--d:'Fraunces',Georgia,serif;--b:'DM Sans',system-ui,sans-serif;--pad:clamp(1.25rem,5vw,4.5rem);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#15120e;--ink:#efe8da;--mute:#a3998a;--line:rgba(239,232,218,.2);--acc:#d77a56;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#15120e;--ink:#efe8da;--mute:#a3998a;--line:rgba(239,232,218,.2);--acc:#d77a56;color-scheme:dark}
+:root[lang=ar]{--d:'Noto Naskh Arabic',serif;--b:'IBM Plex Sans Arabic',sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--b);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--paper);z-index:30}
+a{color:inherit;text-decoration:none}
+em{font-style:italic;color:var(--acc)}
+:root[lang=ar] em{font-style:normal}
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 var(--pad);background:var(--paper);border-bottom:1px solid var(--line)}
+.brand{font:600 1.35rem var(--d);letter-spacing:-.02em}
+.brand i{color:var(--acc);font-style:normal}
+.nv{display:flex;gap:1.6rem;font-size:.9rem}
+.nv a{position:relative;padding:.2rem 0}
+.nv a::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:var(--acc);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+:root[dir=rtl] .nv a::after{transform-origin:right}
+.nv a:hover::after{transform:scaleX(1)}
+.tools{display:flex;align-items:center;gap:.9rem}
+.lg{display:flex;border:1px solid var(--line)}
+.lg button{background:none;border:0;color:var(--mute);font:500 .78rem var(--b);padding:.35rem .6rem;cursor:pointer}
+.lg button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.mb{display:none;background:none;border:0;color:inherit;cursor:pointer;width:30px;height:30px}
+.mb span{display:block;height:1.5px;background:currentColor;margin:7px 0;transition:.3s}
+.mo .mb span:first-child{transform:translateY(4px) rotate(45deg)}
+.mo .mb span:last-child{transform:translateY(-4px) rotate(-45deg)}
+@media(max-width:979px){.mb{display:block}
+.nv{position:fixed;inset:calc(env(safe-area-inset-top,0px) + 64px) 0 auto 0;background:var(--paper);flex-direction:column;gap:0;padding:.5rem var(--pad) 1.5rem;border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.35s;font-size:1.4rem;font-family:var(--d)}
+.nv a{padding:.8rem 0;border-bottom:1px solid var(--line)}
+.mo .nv{transform:none;opacity:1;visibility:visible}}
+.hero{display:grid;gap:3rem;padding:clamp(2.5rem,7vw,6rem) var(--pad) clamp(3rem,8vw,7rem)}
+@media(min-width:900px){.hero{grid-template-columns:7fr 5fr;align-items:end}}
+.kick{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:2rem;display:flex;align-items:center;gap:.8rem}
+:root[lang=ar] .kick{letter-spacing:0;font-size:.9rem}
+.kick::before{content:"";width:2.5rem;height:1px;background:var(--acc)}
+h1{font:350 clamp(2.7rem,8.2vw,7.2rem)/.98 var(--d);letter-spacing:-.035em;font-variation-settings:"opsz" 144}
+:root[lang=ar] h1{line-height:1.3;letter-spacing:0;font-weight:700;font-size:clamp(2.4rem,7vw,6rem)}
+.intro{max-width:34rem;margin:2.2rem 0;color:var(--mute);font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{padding:.95rem 1.7rem;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-weight:500;font-size:.95rem;transition:.3s}
+.btn:hover{background:var(--acc);border-color:var(--acc)}
+.btn.g{background:none;color:var(--ink)}
+.btn.g:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.hv{position:relative;min-height:clamp(20rem,42vw,34rem);border-inline-start:1px solid var(--line);padding-inline-start:clamp(1rem,3vw,2.5rem);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.orb{position:absolute;inset-block-start:2%;inset-inline-end:-8%;width:78%;aspect-ratio:1;border-radius:50%;background:var(--acc);opacity:.92;animation:fl 9s ease-in-out infinite alternate}
+.orb::after{content:"";position:absolute;inset:14%;border:1px solid var(--paper);border-radius:50%}
+@keyframes fl{to{transform:translate(-4%,6%) scale(.96)}}
+.nm{position:relative;font:300 clamp(2.8rem,6.4vw,5.6rem)/.92 var(--d);letter-spacing:-.04em;mix-blend-mode:normal}
+:root[lang=ar] .nm{line-height:1.25;letter-spacing:0;font-weight:700}
+.cap{position:relative;margin-top:1.4rem;font-size:.8rem;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+:root[lang=ar] .cap{letter-spacing:0}
+.sec{display:grid;gap:2rem 4rem;padding:clamp(4rem,10vw,8rem) var(--pad);border-top:1px solid var(--line)}
+@media(min-width:900px){.sec{grid-template-columns:4fr 8fr}}
+.n{display:block;font:300 clamp(4.5rem,11vw,9rem)/.85 var(--d);color:var(--acc);letter-spacing:-.05em}
+h2{font:500 clamp(1.5rem,2.6vw,2.1rem)/1.2 var(--d);margin-top:1rem}
+.lead{font:350 clamp(1.4rem,2.6vw,2.15rem)/1.4 var(--d);margin-bottom:2.5rem}
+:root[lang=ar] .lead{line-height:1.8}
+.fx{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;font-size:.95rem}
+.fx dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+:root[lang=ar] .fx dt{letter-spacing:0;font-size:.85rem}
+.fx dd{font:500 1.3rem var(--d)}
+.g2{display:grid;gap:0 3rem}
+@media(min-width:700px){.g2{grid-template-columns:1fr 1fr}}
+.it{border-top:1px solid var(--line);padding:1.6rem 0 2rem}
+.it b{font:500 .8rem var(--d);color:var(--acc)}
+.it h3,.sk h3{font:500 1.4rem/1.25 var(--d);margin:.5rem 0}
+.it p{color:var(--mute)}
+.sk{border-top:1px solid var(--line);padding:1.4rem 0 2rem}
+.sk h3{color:var(--acc);margin-bottom:1rem}
+.sk li{list-style:none;padding:.5rem 0;border-bottom:1px dashed var(--line);font-size:1rem}
+.xr{display:grid;gap:.6rem 3rem;border-top:1px solid var(--line);padding:2rem 0}
+@media(min-width:700px){.xr{grid-template-columns:1fr 2fr}}
+.xr .m{font-size:.85rem;color:var(--mute)}
+.xr h3{font:500 1.7rem/1.15 var(--d)}
+.xr h4{font-weight:500;color:var(--acc);margin:.2rem 0 .8rem}
+.xr p{color:var(--mute);max-width:36rem}
+.sec.w{grid-template-columns:1fr}
+.wh{display:flex;align-items:flex-end;gap:2rem;margin-bottom:2rem}
+.wh h2{margin:0 0 .6rem}
+.pj{border-top:1px solid var(--line)}
+.pj:last-child{border-bottom:1px solid var(--line)}
+.ph{display:grid;grid-template-columns:auto 1fr auto;gap:.2rem 1.5rem;align-items:center;width:100%;text-align:start;background:none;border:0;color:inherit;padding:1.7rem 0;cursor:pointer;font:inherit}
+.pn{font:400 .9rem var(--d);color:var(--acc);grid-row:1/3}
+.pt{font:350 clamp(1.6rem,4.6vw,3.8rem)/1.05 var(--d);letter-spacing:-.03em;transition:transform .4s,color .3s}
+:root[lang=ar] .pt{letter-spacing:0;line-height:1.4;font-weight:700}
+.pc{grid-column:2;color:var(--mute);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+:root[lang=ar] .pc{letter-spacing:0;font-size:.9rem}
+.pi{grid-row:1/3;grid-column:3;font:300 2.2rem var(--d);color:var(--acc);transition:transform .4s;line-height:1}
+.ph:hover .pt{color:var(--acc);transform:translateX(.6rem)}
+:root[dir=rtl] .ph:hover .pt{transform:translateX(-.6rem)}
+.open .pi{transform:rotate(45deg)}
+.pp{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s ease}
+.open .pp{grid-template-rows:1fr}
+.pp>div{overflow:hidden}
+.pb{padding:0 0 2.4rem;max-width:44rem;margin-inline-start:calc(1.5rem + 1.6rem)}
+.pb p{color:var(--mute);font-size:1.1rem}
+.tg{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.3rem 0 0}
+.tg span{border:1px solid var(--line);padding:.25rem .8rem;font-size:.8rem;border-radius:99px}
+.st{display:flex;flex-wrap:wrap;gap:2rem 3rem;margin:1.6rem 0 0}
+.st strong{display:block;font:300 2.4rem/1 var(--d);color:var(--ink)}
+.st small{color:var(--mute);font-size:.8rem}
+.nt{margin-top:1.4rem;border-inline-start:2px solid var(--acc);padding-inline-start:1rem;font-size:.95rem;color:var(--ink)}
+.gpa{font:300 clamp(4rem,10vw,8rem)/1 var(--d);letter-spacing:-.04em}
+.gpa small{font-size:.35em;color:var(--mute)}
+.ed h3{font:500 1.8rem/1.2 var(--d);margin-top:1.5rem}
+.ed p{color:var(--mute)}
+.ed .bd{display:inline-block;margin-top:1.2rem;border:1px solid var(--acc);color:var(--acc);padding:.3rem .9rem;font-size:.85rem}
+.cr{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.1rem 0;border-top:1px solid var(--line)}
+.cr span:first-child{color:var(--mute);font-size:.85rem}
+.ph2{border-bottom:1px dashed var(--acc);color:var(--acc)}
+.ft{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:2rem var(--pad) 3rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--mute)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hd">
+<a class="brand" href="#top">B<i>.</i>A</a>
+<nav class="nv" id="nv">
+<a href="#about" data-i="n1"></a><a href="#do" data-i="n2"></a><a href="#skills" data-i="n3"></a><a href="#exp" data-i="n4"></a><a href="#work" data-i="n5"></a><a href="#edu" data-i="n6"></a><a href="#contact" data-i="n7"></a>
+</nav>
+<div class="tools">
+<div class="lg" role="group" aria-label="Language"><button data-l="en">EN</button><button data-l="ar">عربي</button><button data-l="tr">TR</button></div>
+<button class="mb" id="mb" aria-label="Menu"><span></span><span></span></button>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="rv">
+<p class="kick" data-i="hk"></p>
+<h1 data-i="h1"></h1>
+<p class="intro" data-i="hi"></p>
+<div class="cta"><a class="btn" href="#work" data-i="c1"></a><a class="btn g" href="#contact" data-i="c2"></a></div>
+</div>
+<div class="hv rv" aria-hidden="true"><div class="orb"></div><div class="nm" data-i="nm"></div><p class="cap" data-i="cap"></p></div>
+</section>
+
+<section class="sec" id="about">
+<div class="rv"><span class="n">01</span><h2 data-i="n1"></h2></div>
+<div class="rv"><p class="lead" data-i="ab"></p>
+<dl class="fx"><div><dt data-i="f1"></dt><dd data-i="f2"></dd></div><div><dt data-i="f3"></dt><dd data-i="f4"></dd></div></dl></div>
+</section>
+
+<section class="sec" id="do">
+<div class="rv"><span class="n">02</span><h2 data-i="n2"></h2></div>
+<div class="g2 rv">
+<div class="it"><b>i.</b><h3 data-i="d1"></h3><p data-i="d1p"></p></div>
+<div class="it"><b>ii.</b><h3 data-i="d2"></h3><p data-i="d2p"></p></div>
+<div class="it"><b>iii.</b><h3 data-i="d3"></h3><p data-i="d3p"></p></div>
+<div class="it"><b>iv.</b><h3 data-i="d4"></h3><p data-i="d4p"></p></div>
+</div>
+</section>
+
+<section class="sec" id="skills">
+<div class="rv"><span class="n">03</span><h2 data-i="n3"></h2></div>
+<div class="g2 rv" dir="ltr" style="direction:inherit">
+<div class="sk"><h3 data-i="k1"></h3><ul><li>Python</li><li>Machine Learning</li><li>Computer Vision</li><li>Natural Language Processing</li><li>Large Language Models</li><li>RAG</li><li>Transformers</li></ul></div>
+<div class="sk"><h3 data-i="k2"></h3><ul><li>TypeScript</li><li>JavaScript</li><li>React</li><li>Next.js</li><li>Laravel</li><li>Node.js</li><li>REST APIs</li></ul></div>
+<div class="sk"><h3 data-i="k3"></h3><ul><li>SQL</li><li>MySQL</li><li>SQLite</li><li>Git</li><li>Docker</li><li>AWS</li><li>Linux</li></ul></div>
+<div class="sk"><h3 data-i="k4"></h3><ul><li>Flutter</li><li>Dart</li></ul></div>
+</div>
+</section>
+
+<section class="sec" id="exp">
+<div class="rv"><span class="n">04</span><h2 data-i="n4"></h2></div>
+<div class="rv">
+<div class="xr"><div class="m" data-i="x1m"></div><div><h3>EMC — Educational Master Central</h3><h4 data-i="x1r"></h4><p data-i="x1p"></p></div></div>
+<div class="xr"><div class="m" data-i="x2m"></div><div><h3>Pro4Automation</h3><h4 data-i="x2r"></h4><p data-i="x2p"></p></div></div>
+<div class="xr"><div class="m" data-i="x3m"></div><div><h3>Lyptus Software</h3><h4 data-i="x3r"></h4><p data-i="x3p"></p></div></div>
+</div>
+</section>
+
+<section class="sec w" id="work">
+<div class="wh rv"><span class="n">05</span><h2 data-i="n5"></h2></div>
+<div class="rv">
+<article class="pj open"><button class="ph" aria-expanded="true"><span class="pn">01</span><span class="pt">EMC Smart Support</span><span class="pc" data-i="p1c"></span><span class="pi">+</span></button><div class="pp"><div><div class="pb"><p data-i="p1p"></p><div class="tg"><span>AI / LLM</span><span>Laravel</span><span>React</span><span>Python</span><span>RAG</span></div></div></div></div></article>
+<article class="pj"><button class="ph" aria-expanded="false"><span class="pn">02</span><span class="pt">AI &amp; Automation Solutions</span><span class="pc" data-i="p2c"></span><span class="pi">+</span></button><div class="pp"><div><div class="pb"><p data-i="p2p"></p><div class="tg"><span>Python</span><span>Machine Learning</span><span>Computer Vision</span><span>LLM</span></div></div></div></div></article>
+<article class="pj"><button class="ph" aria-expanded="false"><span class="pn">03</span><span class="pt">Restaurant Management System</span><span class="pc" data-i="p3c"></span><span class="pi">+</span></button><div class="pp"><div><div class="pb"><p data-i="p3p"></p><div class="tg"><span>React</span></div></div></div></div></article>
+<article class="pj"><button class="ph" aria-expanded="false"><span class="pn">04</span><span class="pt">AI-Powered Medical Screening</span><span class="pc" data-i="p4c"></span><span class="pi">+</span></button><div class="pp"><div><div class="pb"><p data-i="p4p"></p>
+<div class="st"><div><strong>7,005</strong><small data-i="s1"></small></div><div><strong>94.43%</strong><small data-i="s2"></small></div><div><strong>0.9911</strong><small>ROC-AUC</small></div></div>
+<div class="tg"><span>Random Forest</span><span>Flask</span><span>Python</span></div><p class="nt" data-i="p4n"></p></div></div></div></article>
+</div>
+</section>
+
+<section class="sec" id="edu">
+<div class="rv"><span class="n">06</span><h2 data-i="n6"></h2></div>
+<div class="ed rv"><div class="gpa" dir="ltr">3.25<small> / 4.00</small></div><p data-i="e0" style="margin-top:.4rem"></p>
+<h3 data-i="e1"></h3><p data-i="e2"></p><span class="bd" data-i="e3"></span></div>
+</section>
+
+<section class="sec" id="contact">
+<div class="rv"><span class="n">07</span><h2 data-i="n7"></h2></div>
+<div class="rv"><p class="lead" data-i="ct"></p>
+<div class="cr"><span data-i="ce"></span><span class="ph2" data-i="cp"></span></div>
+<div class="cr"><span>LinkedIn</span><span class="ph2" data-i="cp"></span></div>
+<div class="cr"><span>GitHub</span><span class="ph2" data-i="cp"></span></div>
+<div class="cr"><span data-i="f1"></span><span data-i="f2"></span></div></div>
+</section>
+</main>
+
+<footer class="ft"><span>© 2026 <span data-i="fn"></span></span><a href="#top" data-i="up"></a></footer>
+
+<script>
+const T={
+n1:["About","نبذة عني","Hakkımda"],n2:["What I Do","ما أقدّمه","Ne Yapıyorum"],n3:["Technical Skills","المهارات التقنية","Teknik Yetenekler"],n4:["Professional Experience","الخبرة المهنية","Profesyonel Deneyim"],n5:["Selected Projects","مشاريع مختارة","Seçili Projeler"],n6:["Education","التعليم","Eğitim"],n7:["Contact","تواصل","İletişim"],
+hk:["AI Engineer | Computer Engineer | AI & Automation Developer","مهندس ذكاء اصطناعي | مهندس حاسوب | مطوّر ذكاء اصطناعي وأتمتة","Yapay Zekâ Mühendisi | Bilgisayar Mühendisi | YZ ve Otomasyon Geliştiricisi"],
+h1:["Intelligence, engineered for the <em>real world</em>.","ذكاءٌ اصطناعي، مهندَسٌ للعالم <em>الحقيقي</em>.","Gerçek dünya için tasarlanmış <em>zekâ</em>."],
+hi:["I build intelligent systems that connect artificial intelligence, automation, and practical software engineering to solve real-world problems.","أبني أنظمة ذكية تربط بين الذكاء الاصطناعي والأتمتة وهندسة البرمجيات العملية لحل مشكلات واقعية.","Yapay zekâyı, otomasyonu ve pratik yazılım mühendisliğini birleştirerek gerçek dünya sorunlarını çözen akıllı sistemler geliştiriyorum."],
+c1:["View Projects","استعرض المشاريع","Projeleri Gör"],c2:["Contact Me","تواصل معي","İletişime Geç"],
+nm:["Bashar<br><em>Alkhawlani</em>","بشار<br><em>الخولاني</em>","Bashar<br><em>Alkhawlani</em>"],cap:["Portfolio — 2026 — Saudi Arabia","ملف الأعمال — 2026 — السعودية","Portfolyo — 2026 — Suudi Arabistan"],
+ab:["I’m a Yemeni computer engineer based in Saudi Arabia. I graduated in 2026 from Kastamonu University, where I studied in Turkish and ranked second in my department. My work sits where machine learning, LLM applications, and everyday software meet.","أنا مهندس حاسوب يمني مقيم في المملكة العربية السعودية. تخرجتُ عام 2026 من جامعة كاستامونو، حيث درستُ باللغة التركية وحصلتُ على المركز الثاني في قسمي. يتقاطع عملي عند نقطة التقاء تعلّم الآلة وتطبيقات النماذج اللغوية والبرمجيات اليومية.","Suudi Arabistan’da yaşayan Yemenli bir bilgisayar mühendisiyim. 2026’da Kastamonu Üniversitesi’nden Türkçe eğitimle mezun oldum ve bölümümde ikinci oldum. Çalışmalarım makine öğrenmesi, LLM uygulamaları ve gündelik yazılımın kesiştiği noktada yer alıyor."],
+f1:["Location","الموقع","Konum"],f2:["Saudi Arabia","المملكة العربية السعودية","Suudi Arabistan"],f3:["Nationality","الجنسية","Uyruk"],f4:["Yemeni","يمنية","Yemenli"],
+d1:["AI & LLM Applications","تطبيقات الذكاء الاصطناعي والنماذج اللغوية","YZ ve LLM Uygulamaları"],d1p:["Assistants, RAG pipelines, and Transformer-based chatbots.","مساعدون أذكياء ومسارات RAG وروبوتات محادثة قائمة على Transformers.","Asistanlar, RAG hatları ve Transformer tabanlı sohbet botları."],
+d2:["Machine Learning & Vision","تعلّم الآلة والرؤية الحاسوبية","Makine Öğrenmesi ve Görüntü İşleme"],d2p:["Models and experiments for prediction and image understanding.","نماذج وتجارب للتنبؤ وفهم الصور.","Tahmin ve görüntü anlama için modeller ve deneyler."],
+d3:["Intelligent Automation","الأتمتة الذكية","Akıllı Otomasyon"],d3p:["Python workflows that turn manual processes into reliable systems.","مسارات عمل بلغة Python تحوّل العمليات اليدوية إلى أنظمة موثوقة.","Manuel süreçleri güvenilir sistemlere dönüştüren Python iş akışları."],
+d4:["Web & Support Engineering","هندسة الويب والدعم التقني","Web ve Teknik Destek Mühendisliği"],d4p:["Laravel and React platforms, plus hands-on technical troubleshooting.","منصات Laravel وReact مع معالجة عملية للمشكلات التقنية.","Laravel ve React platformları ile uygulamalı teknik sorun giderme."],
+k1:["AI & Machine Learning","الذكاء الاصطناعي وتعلّم الآلة","Yapay Zekâ ve Makine Öğrenmesi"],k2:["Software Engineering","هندسة البرمجيات","Yazılım Mühendisliği"],k3:["Data & Infrastructure","البيانات والبنية التحتية","Veri ve Altyapı"],k4:["Mobile Development","تطوير تطبيقات الجوال","Mobil Geliştirme"],
+x1m:["Remote<br>Mar 2026 – Present","عن بُعد<br>مارس 2026 – الآن","Uzaktan<br>Mar 2026 – Günümüz"],x1r:["Technical Support Engineer","مهندس دعم تقني","Teknik Destek Mühendisi"],x1p:["Supporting an educational platform built on Laravel and React: troubleshooting issues, supporting platform functionality, and improving the user experience.","دعم منصة تعليمية رقمية مبنية على Laravel وReact: معالجة المشكلات التقنية ودعم وظائف المنصة وتحسين تجربة المستخدم.","Laravel ve React üzerine kurulu bir eğitim platformuna destek: teknik sorunları giderme, platform işlevlerini destekleme ve kullanıcı deneyimini iyileştirme."],
+x2m:["Gaziantep, Türkiye","غازي عنتاب، تركيا","Gaziantep, Türkiye"],x2r:["AI & Automation Engineer Intern","متدرّب مهندس ذكاء اصطناعي وأتمتة","YZ ve Otomasyon Mühendisi Stajyeri"],x2p:["Python automation and data processing, computer vision and machine learning experiments, and LLM and Transformer-based chatbot development.","أتمتة بلغة Python ومعالجة البيانات، وتجارب في الرؤية الحاسوبية وتعلّم الآلة، وتطوير روبوتات محادثة قائمة على النماذج اللغوية وTransformers.","Python ile otomasyon ve veri işleme, görüntü işleme ve makine öğrenmesi deneyleri, LLM ve Transformer tabanlı sohbet botu geliştirme."],
+x3m:["30 days","30 يومًا","30 gün"],x3r:["Software Engineer","مهندس برمجيات","Yazılım Mühendisi"],x3p:["Contributed to a restaurant management system using React, helping develop software functionality and user interfaces.","ساهمتُ في نظام لإدارة المطاعم باستخدام React، وشاركتُ في تطوير الوظائف وواجهات المستخدم.","React ile bir restoran yönetim sistemine katkıda bulundum; yazılım işlevlerinin ve kullanıcı arayüzlerinin geliştirilmesine katıldım."],
+p1c:["AI Support Systems","أنظمة الدعم الذكية","YZ Destek Sistemleri"],p1p:["An intelligent support assistant for an educational platform. It helps users solve platform-related problems and escalates unresolved issues into support tickets.","مساعد دعم ذكي لمنصة تعليمية، يساعد المستخدمين على حل المشكلات المرتبطة بالمنصة، ويحوّل المسائل العالقة إلى تذاكر دعم.","Bir eğitim platformu için akıllı destek asistanı. Kullanıcıların platform sorunlarını çözmesine yardımcı olur, çözülemeyen sorunları destek talebine dönüştürür."],
+p2c:["Artificial Intelligence","الذكاء الاصطناعي","Yapay Zekâ"],p2p:["Practical AI and automation experiments spanning machine learning, computer vision, LLM applications, data processing, and intelligent automation.","تجارب عملية في الذكاء الاصطناعي والأتمتة تشمل تعلّم الآلة والرؤية الحاسوبية وتطبيقات النماذج اللغوية ومعالجة البيانات والأتمتة الذكية.","Makine öğrenmesi, görüntü işleme, LLM uygulamaları, veri işleme ve akıllı otomasyonu kapsayan pratik YZ ve otomasyon deneyleri."],
+p3c:["Web Application","تطبيق ويب","Web Uygulaması"],p3p:["A restaurant management system built with React, focused on organizing restaurant operations and management functionality.","نظام لإدارة المطاعم مبني بـ React، يركّز على تنظيم عمليات المطعم ووظائف الإدارة.","React ile geliştirilen, restoran operasyonlarını ve yönetim işlevlerini düzenlemeye odaklanan bir restoran yönetim sistemi."],
+p4c:["Machine Learning","تعلّم الآلة","Makine Öğrenmesi"],p4p:["A machine learning project on postpartum depression screening. A Random Forest model trained on cleaned records, presented through a Flask-based demonstration.","مشروع تعلّم آلة للفحص الأولي لاكتئاب ما بعد الولادة، بنموذج Random Forest مدرَّب على سجلات منقّاة، ومعروض عبر عرض توضيحي مبني بـ Flask.","Doğum sonrası depresyon taramasına yönelik bir makine öğrenmesi projesi. Temizlenmiş kayıtlar üzerinde eğitilmiş bir Random Forest modeli, Flask tabanlı bir demo ile sunulur."],
+s1:["cleaned records","سجل منقّى","temizlenmiş kayıt"],s2:["accuracy","الدقة","doğruluk"],
+p4n:["An experimental screening model — not a medical diagnosis system.","نموذج فحص تجريبي، وليس نظامًا للتشخيص الطبي.","Deneysel bir tarama modelidir; tıbbi teşhis sistemi değildir."],
+e0:["GPA","المعدل التراكمي","GNO"],e1:["Kastamonu University","جامعة كاستامونو","Kastamonu Üniversitesi"],e2:["Bachelor of Computer Engineering — Türkiye, 2026","بكالوريوس هندسة الحاسوب — تركيا، 2026","Bilgisayar Mühendisliği Lisansı — Türkiye, 2026"],e3:["Second-ranked student in the department","الطالب الثاني على القسم","Bölüm ikincisi"],
+ct:["Let’s build something intelligent together.","لنبنِ معًا شيئًا ذكيًا.","Birlikte akıllı bir şey inşa edelim."],ce:["Email","البريد الإلكتروني","E-posta"],cp:["[ to be added ]","[ سيُضاف لاحقًا ]","[ eklenecek ]"],
+fn:["Bashar Alkhawlani","بشار الخولاني","Bashar Alkhawlani"],up:["Back to top ↑","العودة للأعلى ↑","Başa dön ↑"]};
+const L=["en","ar","tr"],R=document.documentElement;
+function setLang(l){const x=L.indexOf(l);R.lang=l;R.dir=l=="ar"?"rtl":"ltr";
+document.querySelectorAll("[data-i]").forEach(e=>{e.innerHTML=T[e.dataset.i][x]});
+document.querySelectorAll(".lg button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l==l));
+document.title=["Bashar Alkhawlani — AI Engineer","بشار الخولاني — مهندس ذكاء اصطناعي","Bashar Alkhawlani — Yapay Zekâ Mühendisi"][x];
+try{localStorage.setItem("lang",l)}catch(e){}}
+let s="en";try{s=localStorage.getItem("lang")||(/^ar/.test(navigator.language)?"ar":/^tr/.test(navigator.language)?"tr":"en")}catch(e){}
+setLang(L.includes(s)?s:"en");
+document.querySelectorAll(".lg button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+const mb=document.getElementById("mb");mb.onclick=()=>document.body.classList.toggle("mo");
+document.querySelectorAll(".nv a").forEach(a=>a.onclick=()=>document.body.classList.remove("mo"));
+document.querySelectorAll(".ph").forEach(b=>b.onclick=()=>{const p=b.parentElement,o=p.classList.toggle("open");b.setAttribute("aria-expanded",o)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
